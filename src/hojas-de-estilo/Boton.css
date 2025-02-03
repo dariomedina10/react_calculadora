@@ -16,6 +16,17 @@
 	
 }
 
+
 .operador{
 	background-color: green;
+}
+
+.boton-contenedor:hover{
+	
+	background-color: #5a01a7;
+	
+}
+
+.operador:hover{
+	background-color: orange;
 }
