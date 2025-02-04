@@ -2,22 +2,31 @@ import logo from './imagenes/freecodecamp.png';
 import Boton from './componentes/Boton.jsx';
 import Pantalla from './componentes/Pantalla.jsx'
 import BotonLimpiar from './componentes/Limpiar.jsx';
+import { useState } from 'react';
 import './App.css';
 
 function App() {
+  
+  const [input,setInput] = useState ('');
+  
+  const agregarInput = valor => {
+    
+    setInput(input + valor);
+    
+  } ;
   return (
     <div className='App'>
      <div className='freecodecamp-logo-contenedor'>
         <img src={logo} className='freecodecamp-logo' alt='logo' />
         </div>   
-        
+        <br></br><br></br> 
         <div className='contenedor-calculadora'>
-        <Pantalla/>
+        <Pantalla input={input} />
         <div className='fila'>
-        <Boton>1</Boton>
-        <Boton>2</Boton>
-        <Boton>3</Boton>
-        <Boton>+</Boton>
+        <Boton manejarCLic={agregarInput}>1</Boton>
+        <Boton manejarCLic={agregarInput}>2</Boton>
+        <Boton manejarCLic={agregarInput}>3</Boton>
+        <Boton manejarCLic={agregarInput}>+</Boton>
         </div>  
         <div className='fila'>
         <Boton>4</Boton>

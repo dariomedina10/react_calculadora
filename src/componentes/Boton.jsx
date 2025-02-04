@@ -12,7 +12,8 @@ function Boton(props){
     return(
         
         <div
-        className= {`boton-contenedor ${esOperador(props.children) ? 'operador' :null} `}>
+        className= {`boton-contenedor ${esOperador(props.children) ? 'operador' :null} `} 
+        onclick={ () => props.manejarCLic(props.children)}>
         {props.children} 
         </div>
         
