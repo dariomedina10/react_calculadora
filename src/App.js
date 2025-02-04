@@ -10,16 +10,14 @@ function App() {
   const [input,setInput] = useState ('');
   
   const agregarInput = valor => {
-    
-    setInput(input + valor);
-    
+    setInput(input + valor); 
   } ;
   return (
     <div className='App'>
      <div className='freecodecamp-logo-contenedor'>
         <img src={logo} className='freecodecamp-logo' alt='logo' />
         </div>   
-        <br></br><br></br> 
+      
         <div className='contenedor-calculadora'>
         <Pantalla input={input} />
         <div className='fila'>
@@ -27,25 +25,27 @@ function App() {
         <Boton manejarCLic={agregarInput}>2</Boton>
         <Boton manejarCLic={agregarInput}>3</Boton>
         <Boton manejarCLic={agregarInput}>+</Boton>
+        
+    
         </div>  
         <div className='fila'>
-        <Boton>4</Boton>
-        <Boton>5</Boton>
-        <Boton>6</Boton>
-        <Boton>-</Boton>
+        <Boton manejarCLic={agregarInput}>4</Boton>
+        <Boton manejarCLic={agregarInput}>5</Boton>
+        <Boton manejarCLic={agregarInput}>6</Boton>
+        <Boton manejarCLic={agregarInput}>-</Boton>
         </div>  
         <div className='fila'>
-        <Boton>7</Boton>
-        <Boton>8</Boton>
-        <Boton>9</Boton>
-        <Boton>*</Boton>
+        <Boton manejarCLic={agregarInput}>7</Boton>
+        <Boton manejarCLic={agregarInput}>8</Boton>
+        <Boton manejarCLic={agregarInput}>9</Boton>
+        <Boton manejarCLic={agregarInput}>*</Boton>
         
         </div>  
         <div className='fila'>
-        <Boton>=</Boton>
-        <Boton>0</Boton>
-        <Boton>.</Boton>
-        <Boton>/</Boton>
+        <Boton manejarCLic={agregarInput}>=</Boton>
+        <Boton manejarCLic={agregarInput}>0</Boton>
+        <Boton manejarCLic={agregarInput}>.</Boton>
+        <Boton manejarCLic={agregarInput}>/</Boton>
         </div>  
         <div className='fila'>
         <BotonLimpiar>Limpiar</BotonLimpiar>
