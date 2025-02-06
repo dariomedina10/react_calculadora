@@ -11,13 +11,25 @@ function App() {
   const [input,setInput] = useState ('');
   
   const agregarInput = valor => {
-    setInput(input + valor); 
+ 
+    
+      setInput(input + valor); 
+  
+     //alert('Falta Ingresar un Valor');}
+    
+
   } ;
   
   const calcularResultado = () =>{
-    
-    setInput(evaluate(input));
+  /* var a;
+    a=input.length;
+    alert (a);*/
+          if (input){
+            setInput(evaluate(input));
+      }else{
+    alert('Por Favor ingresar valores númericos');
   }
+}     
   return (
     <div className='App'>
      <div className='freecodecamp-logo-contenedor'>
@@ -31,8 +43,7 @@ function App() {
         <Boton manejarCLic={agregarInput}>2</Boton>
         <Boton manejarCLic={agregarInput}>3</Boton>
         <Boton manejarCLic={agregarInput}>+</Boton>
-        
-    
+         
         </div>  
         <div className='fila'>
         <Boton manejarCLic={agregarInput}>4</Boton>
@@ -55,12 +66,9 @@ function App() {
         </div>  
         <div className='fila'>
         <BotonLimpiar manejarClear={ () => setInput('')}>Limpiar</BotonLimpiar>
-        
+      
         </div>
         <div className='fila'></div>  
-      
-       
-      
         </div>   
     </div>
   );
