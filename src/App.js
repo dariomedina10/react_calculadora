@@ -21,14 +21,30 @@ function App() {
   } ;
   
   const calcularResultado = () =>{
-  /* var a;
-    a=input.length;
-    alert (a);*/
-          if (input){
+    
+//    primera = saludo.split(' ')[0]
+
+  /* var a,b;
+    
+    alert(a);
+  // a=input.lastIndexOf('+');
+  b=input.substring(a-3,a-1);
+   alert(b);*/
+  // var u = input.charAt(input.length()-1);
+  var a,u;
+  a=input.length;
+  u = input.charAt(input.length -1);
+  
+  if (isNaN (u)){
+    alert ('Debe Ingresar un valor para poder realizar la operacion');
+  } else {
+  
+          if (input){;
             setInput(evaluate(input));
       }else{
     alert('Por Favor ingresar valores númericos');
   }
+}
 }     
   return (
     <div className='App'>
